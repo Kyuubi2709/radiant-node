@@ -8,7 +8,7 @@ LABEL maintainer="radiantblockchain@protonmail.com"
 LABEL version="1.0.0"
 LABEL description="Docker image for radiantd node"
 
-ARG DEBIAN_FRONTEND=nointeractive
+ENV DEBIAN_FRONTEND=nointeractive
 RUN apt update
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
